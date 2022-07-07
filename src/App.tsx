@@ -8,6 +8,8 @@ import { DownLoad } from "./Download";
 import { useCount } from "./useName";
 import { ShowHook } from "./showHook";
 
+import { Sticky } from "@nova/atom"
+
 const tailLayout = {
   labelCol: { offset: 3 },
 };
@@ -59,7 +61,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{position: 'relative', height: '200px'}}>
       {count}
       <ShowHook />
       <Form
@@ -94,6 +96,7 @@ const App: React.FC = () => {
           <Statistics {...date}/>
         </TabPane>
       </Tabs>
+      <Sticky top="10px"><button>{count}</button></Sticky>
     </div>
   );
 };

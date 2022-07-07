@@ -1,7 +1,7 @@
 import { message, Table } from "antd";
 import type { ColumnsType, TablePaginationConfig } from "antd/lib/table";
 import { Moment } from "moment";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DetailItem, getDetails } from "./api";
 
 interface Props {
