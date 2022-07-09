@@ -1,19 +1,43 @@
-import { Button } from "antd";
 import React from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { fontSizePx, fontSizeState } from "./store";
+import { TodoContainer } from "./to-do/Index";
 
-
-const App: React.FC = () => {
-
-  const [ fontSize, setFontSize ] = useRecoilState(fontSizeState)
-  const fontSizeV = useRecoilValue(fontSizePx)
- 
+const App: React.FC = () => { 
   return (
     <div className="App" style={{position: 'relative', height: '200px'}}>
-      <Button onClick={() => setFontSize(fontSize+1)} style={{ fontSize: fontSizeV }}>{ fontSize }</Button>
+      <TodoContainer />
     </div>
   );
 };
 
 export default App;
+
+type TPageName = "home" | "details" | "welcome"
+
+interface IPage {
+  title: string;
+  body: string
+}
+
+const pages: Record<TPageName, IPage> = {
+  details: {
+    title: "",
+    body: ""
+  },
+  home: {
+    title: "",
+    body: ""
+  },
+  welcome: {
+    title: "",
+    body: ""
+  }
+}
+
+type IOtherPage = {
+  [key in TPageName]: IPage
+}
+
+let otherPages: IOtherPage = pages
+
+console.log(pages)
+console.log(otherPages)

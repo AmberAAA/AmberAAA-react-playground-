@@ -1,4 +1,4 @@
-import { atom, selector } from "recoil"
+import { atom, selector} from "recoil"
 
 export enum STATE {
     FONT_SIZE = "FONT_SIZE",
