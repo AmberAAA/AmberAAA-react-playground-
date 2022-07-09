@@ -52,6 +52,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://172.16.9.118:4002/mock/36/"
+  }
 }
